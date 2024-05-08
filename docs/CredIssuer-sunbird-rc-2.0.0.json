@@ -1,0 +1,504 @@
+{
+	"info": {
+		"_postman_id": "1ac3d141-6c17-4311-aa08-995cb193c055",
+		"name": "CredIssuer-sunbird-rc-2.0.0",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "19014814"
+	},
+	"item": [
+		{
+			"name": "Registry",
+			"item": [
+				{
+					"name": "Schema",
+					"item": [
+						{
+							"name": "Create Schema",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Cookie",
+										"value": "JSESSIONID=A578AB3356BC90A98A8DA426127DC297",
+										"name": "cookie",
+										"type": "text"
+									},
+									{
+										"key": "Cache-Control",
+										"value": "no-cache",
+										"name": "cache-control",
+										"type": "text"
+									},
+									{
+										"key": "Postman-Token",
+										"value": "<calculated when request is sent>",
+										"name": "postman-token",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"name": "content-type",
+										"type": "text"
+									},
+									{
+										"key": "Content-Length",
+										"value": "<calculated when request is sent>",
+										"name": "content-length",
+										"type": "text"
+									},
+									{
+										"key": "Host",
+										"value": "<calculated when request is sent>",
+										"name": "host",
+										"type": "text"
+									},
+									{
+										"key": "User-Agent",
+										"value": "PostmanRuntime/7.32.1",
+										"name": "user-agent",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*",
+										"name": "accept",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Encoding",
+										"value": "gzip, deflate, br",
+										"name": "accept-encoding",
+										"type": "text"
+									},
+									{
+										"key": "Connection",
+										"value": "keep-alive",
+										"name": "connection",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {access-token}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Place\",\n  \"schema\": \"{\\\"$schema\\\":\\\"http://json-schema.org/draft-07/schema\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"Place\\\":{\\\"$ref\\\":\\\"#/definitions/Place\\\"}},\\\"required\\\":[\\\"Place\\\"],\\\"title\\\":\\\"Place\\\",\\\"definitions\\\":{\\\"Place\\\":{\\\"$id\\\":\\\"#/properties/Place\\\",\\\"type\\\":\\\"object\\\",\\\"title\\\":\\\"The Place Schema\\\",\\\"required\\\":[\\\"name\\\",\\\"city\\\"],\\\"properties\\\":{\\\"name\\\":{\\\"type\\\":\\\"string\\\"},\\\"city\\\":{\\\"type\\\":\\\"string\\\"}}}},\\\"_osConfig\\\":{\\\"privateFields\\\":[\\\"name\\\"],\\\"signedFields\\\":[],\\\"roles\\\":[\\\"anonymous\\\"],\\\"ownershipAttributes\\\":[],\\\"attestationPolicies\\\":[{\\\"name\\\":\\\"schemaAttestation\\\",\\\"conditions\\\":\\\"(ATTESTOR#$.[*]#.contains('board-cbse'))\\\",\\\"type\\\":\\\"MANUAL\\\",\\\"attestorPlugin\\\":\\\"did:internal:ClaimPluginActor?entity=board-cbse\\\",\\\"attestationProperties\\\":{}}],\\\"credentialTemplate\\\":{\\\"@context\\\":[\\\"https://www.w3.org/2018/credentials/v1\\\",\\\"https://example.com/template\\\"],\\\"type\\\":[\\\"VerifiableCredential\\\",\\\"CertificateOfCompletion\\\"],\\\"issuer\\\":\\\"My Organization\\\",\\\"issuanceDate\\\":\\\"2024-04-30\\\",\\\"credentialSubject\\\":{\\\"type\\\":\\\"Place\\\",\\\"name\\\":\\\"Sample Place\\\"},\\\"evidence\\\":{\\\"type\\\":\\\"Photograph\\\"}},\\\"certificateTemplates\\\":{\\\"html\\\":\\\"https://example.com/certificate-template\\\"}}}\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{REGISTRY_BASE_URL}}/api/v1/Schema"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Schema",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Cookie",
+										"value": "JSESSIONID=A578AB3356BC90A98A8DA426127DC297",
+										"name": "cookie",
+										"type": "text"
+									},
+									{
+										"key": "Cache-Control",
+										"value": "no-cache",
+										"name": "cache-control",
+										"type": "text"
+									},
+									{
+										"key": "Postman-Token",
+										"value": "<calculated when request is sent>",
+										"name": "postman-token",
+										"type": "text"
+									},
+									{
+										"key": "Host",
+										"value": "<calculated when request is sent>",
+										"name": "host",
+										"type": "text"
+									},
+									{
+										"key": "User-Agent",
+										"value": "PostmanRuntime/7.32.1",
+										"name": "user-agent",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*",
+										"name": "accept",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Encoding",
+										"value": "gzip, deflate, br",
+										"name": "accept-encoding",
+										"type": "text"
+									},
+									{
+										"key": "Connection",
+										"value": "keep-alive",
+										"name": "connection",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJYQnp0bmRybER6eU1NTTJxU2VpYmQ0NUVSd3lJLXRkVG5YLW51Znc3eC1jIn0.eyJleHAiOjE3MTQzOTUxNjcsImlhdCI6MTcxNDM5NDg2NywianRpIjoiM2ZiY2RhNzEtYjdlMi00NzEzLWI1ZjItMmNiYTZjMWQzYjk4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3N1bmJpcmQtcmMiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZjE3OWEyZGQtZjM4Yi00Y2RhLWJiZmItYjRlZmUxNzg4MzgxIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicmVnaXN0cnktZnJvbnRlbmQiLCJzZXNzaW9uX3N0YXRlIjoiYWZmNTM4ZGUtNGFiNy00ZDdmLThjZGMtY2FiOGRhMmM2NzlkIiwiYWNyIjoiMSIsInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImFkbWluIiwiZGVmYXVsdC1yb2xlcy1zdW5iaXJkLXJjIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJjaGFuZHJ1IGNoYW5kcnUiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbjEiLCJnaXZlbl9uYW1lIjoiY2hhbmRydSIsImZhbWlseV9uYW1lIjoiY2hhbmRydSIsImVtYWlsIjoidG9jaGFuZHJ1LmVuZ2luZWVyQGdtYWlsLmNvbSJ9.Mi4X_LJ0IIttzsrwn5MgoARjfDs0aQ-wO7sJkGIsnK_OG6TiC19wh8e_Zt2QcPeq4thcsQSu_UmOn1hMniTiu-PH1d0dbqWG_VZv6i4WusH2i_6ankvBKosI4Q7Jlqb3PPOZ1fOhZJcAdTMLlKwj5knMbB-tJCY0KVkSdsICi1DKyr4CU7gFGvKOI3bdMejnM23FGOK1zJuvnZIQf2VnNrzYRXnqhoWBY7ivDJJ6WVsM9ETysDJvG9hnE1DynV9y9BW-8x0aKuGSGEYv21RcVecaZ8T-AG1T5sBJdVFimRMVtxLhTvJ5jvupExDsdLuwXKOf0yKznlozK3Qp3LrSGQ",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{REGISTRY_BASE_URL}}/api/v1/Schema/1-3a7136d8-ac0f-4097-8c68-652bc38c1055"
+							},
+							"response": []
+						},
+						{
+							"name": "Publish Schema",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Cookie",
+										"value": "JSESSIONID=A578AB3356BC90A98A8DA426127DC297",
+										"name": "cookie",
+										"type": "text"
+									},
+									{
+										"key": "Cache-Control",
+										"value": "no-cache",
+										"name": "cache-control",
+										"type": "text"
+									},
+									{
+										"key": "Postman-Token",
+										"value": "<calculated when request is sent>",
+										"name": "postman-token",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"name": "content-type",
+										"type": "text"
+									},
+									{
+										"key": "Content-Length",
+										"value": "<calculated when request is sent>",
+										"name": "content-length",
+										"type": "text"
+									},
+									{
+										"key": "Host",
+										"value": "<calculated when request is sent>",
+										"name": "host",
+										"type": "text"
+									},
+									{
+										"key": "User-Agent",
+										"value": "PostmanRuntime/7.32.1",
+										"name": "user-agent",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*",
+										"name": "accept",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Encoding",
+										"value": "gzip, deflate, br",
+										"name": "accept-encoding",
+										"type": "text"
+									},
+									{
+										"key": "Connection",
+										"value": "keep-alive",
+										"name": "connection",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJYQnp0bmRybER6eU1NTTJxU2VpYmQ0NUVSd3lJLXRkVG5YLW51Znc3eC1jIn0.eyJleHAiOjE3MTQzOTUxNjcsImlhdCI6MTcxNDM5NDg2NywianRpIjoiM2ZiY2RhNzEtYjdlMi00NzEzLWI1ZjItMmNiYTZjMWQzYjk4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3N1bmJpcmQtcmMiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZjE3OWEyZGQtZjM4Yi00Y2RhLWJiZmItYjRlZmUxNzg4MzgxIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicmVnaXN0cnktZnJvbnRlbmQiLCJzZXNzaW9uX3N0YXRlIjoiYWZmNTM4ZGUtNGFiNy00ZDdmLThjZGMtY2FiOGRhMmM2NzlkIiwiYWNyIjoiMSIsInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImFkbWluIiwiZGVmYXVsdC1yb2xlcy1zdW5iaXJkLXJjIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJjaGFuZHJ1IGNoYW5kcnUiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbjEiLCJnaXZlbl9uYW1lIjoiY2hhbmRydSIsImZhbWlseV9uYW1lIjoiY2hhbmRydSIsImVtYWlsIjoidG9jaGFuZHJ1LmVuZ2luZWVyQGdtYWlsLmNvbSJ9.Mi4X_LJ0IIttzsrwn5MgoARjfDs0aQ-wO7sJkGIsnK_OG6TiC19wh8e_Zt2QcPeq4thcsQSu_UmOn1hMniTiu-PH1d0dbqWG_VZv6i4WusH2i_6ankvBKosI4Q7Jlqb3PPOZ1fOhZJcAdTMLlKwj5knMbB-tJCY0KVkSdsICi1DKyr4CU7gFGvKOI3bdMejnM23FGOK1zJuvnZIQf2VnNrzYRXnqhoWBY7ivDJJ6WVsM9ETysDJvG9hnE1DynV9y9BW-8x0aKuGSGEYv21RcVecaZ8T-AG1T5sBJdVFimRMVtxLhTvJ5jvupExDsdLuwXKOf0yKznlozK3Qp3LrSGQ",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\": \"PUBLISHED\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{REGISTRY_BASE_URL}}s/api/v1/Schema/1-3a7136d8-ac0f-4097-8c68-652bc38c1055"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Entity",
+					"item": [
+						{
+							"name": "Create Entity",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Cache-Control",
+										"value": "no-cache",
+										"name": "cache-control",
+										"type": "text"
+									},
+									{
+										"key": "Postman-Token",
+										"value": "<calculated when request is sent>",
+										"name": "postman-token",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"name": "content-type",
+										"type": "text"
+									},
+									{
+										"key": "Content-Length",
+										"value": "<calculated when request is sent>",
+										"name": "content-length",
+										"type": "text"
+									},
+									{
+										"key": "Host",
+										"value": "<calculated when request is sent>",
+										"name": "host",
+										"type": "text"
+									},
+									{
+										"key": "User-Agent",
+										"value": "PostmanRuntime/7.32.1",
+										"name": "user-agent",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*",
+										"name": "accept",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Encoding",
+										"value": "gzip, deflate, br",
+										"name": "accept-encoding",
+										"type": "text"
+									},
+									{
+										"key": "Connection",
+										"value": "keep-alive",
+										"name": "connection",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type:",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Gunachandru\",\n    \"city\": \"Ramanathapuram\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{REGISTRY_BASE_URL}}/api/v1/Place/"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Entity",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{REGISTRY_BASE_URL}}/api/v1/Place/1-ea4a2212-cd41-456a-a09f-3ad0242dd101"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Credentialing",
+			"item": [
+				{
+					"name": "Credentials Schema",
+					"item": [
+						{
+							"name": "Create Cred Schema",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"schema\": {\n        \"type\": \"https://w3c-ccg.github.io/vc-json-schemas/\",\n        \"version\": \"1.0.0\",\n        \"id\": \"did:ulpschema:c9cc0f03-4f94-4f44-9bcd-b24a8696fa2\",\n        \"name\": \"Proof of Academic Evaluation Credential\",\n        \"author\": \"did:rcw:5d5202e5-c451-47f5-b9b0-4974187c27f9\",\n        \"authored\": \"2022-12-19T09:22:23.064Z\",\n        \"schema\": {\n            \"$id\": \"Proof-of-Academic-Evaluation-Credential-1.0\",\n            \"$schema\": \"https://json-schema.org/draft/2019-09/schema\",\n            \"description\": \"The holder has secured the <PERCENTAGE/GRADE> in <PROGRAMME> from <ABC_Institute>.\",\n            \"type\": \"object\",\n            \"properties\": {\n                \"grade\": {\n                    \"type\": \"string\",\n                    \"description\": \"Grade (%age, GPA, etc.) secured by the holder.\"\n                },\n                \"programme\": {\n                    \"type\": \"string\",\n                    \"description\": \"Name of the programme pursed by the holder.\"\n                },\n                \"certifyingInstitute\": {\n                    \"type\": \"string\",\n                    \"description\": \"Name of the instute which certified the said grade in the said skill\"\n                },\n                \"evaluatingInstitute\": {\n                    \"type\": \"string\",\n                    \"description\": \"Name of the institute which ran the programme and evaluated the holder.\"\n                }\n            },\n            \"required\": [\n                \"grade\",\n                \"programme\",\n                \"certifyingInstitute\",\n                \"evaluatingInstitute\"\n            ],\n            \"additionalProperties\": true\n        }\n    },\n    \"tags\": [\n        \"tag1\",\n        \"tag2\"\n    ],\n    \"status\": \"DRAFT\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{CREDSCHEMA_BASE_URL}}/credential-schema"
+							},
+							"response": []
+						},
+						{
+							"name": "Publish Cred Schema",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{CREDSCHEMA_BASE_URL}}/credential-schema/publish/did:schema:417b223a-ae71-4f3d-badf-cdde4d791513/1.0.0"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Cred Schema By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{CREDSCHEMA_BASE_URL}}/credential-schema/did:schema:2d65aed1-4f6a-4250-b5fc-dd787ae7947c"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Cred Schema By ID and Version",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{CREDSCHEMA_BASE_URL}}/credential-schema/did:schema:03a43e44-b674-4082-a8ec-7112a28c2489/1.0.0"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Cred Schema",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"schema\": {\n        \"type\": \"https://w3c-ccg.github.io/vc-json-schemas/\",\n        \"id\": \"did:schema:b22f7835-0255-412b-8663-d1131c48aa66\",\n        \"version\": \"1.0.0\",\n        \"name\": \"Proof of Academic Evaluation Credential\",\n        \"author\": \"did:rcw:6b9d7b31-bc7f-454a-be30-b6c7447b1cff\",\n        \"authored\": \"2022-12-19T09:22:23.064Z\",\n        \"schema\": {\n            \"$id\": \"Proof-of-Academic-Evaluation-Credential-1.0\",\n            \"type\": \"object\",\n            \"$schema\": \"https://json-schema.org/draft/2019-09/schema\",\n            \"required\": [\n                \"grade\",\n                \"programme\",\n                \"certifyingInstitute\",\n                \"evaluatingInstitute\"\n            ],\n            \"properties\": {\n                \"grade\": {\n                    \"type\": \"string\",\n                    \"description\": \"Grade (%age, GPA, etc.) secured by the holder.\"\n                },\n                \"programme\": {\n                    \"type\": \"string\",\n                    \"description\": \"Name of the programme pursed by the holder.\"\n                },\n                \"certifyingInstitute\": {\n                    \"type\": \"string\",\n                    \"description\": \"Name of the instute which certified the said grade in the said skill\"\n                },\n                \"evaluatingInstitute\": {\n                    \"type\": \"string\",\n                    \"description\": \"Name of the institute which ran the programme and evaluated the holder.\"\n                }\n            },\n            \"description\": \"The holder has secured the <PERCENTAGE/GRADE> in <PROGRAMME> from <ABC_Institute>.\",\n            \"additionalProperties\": true\n        }\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{CREDSCHEMA_BASE_URL}}/credential-schema/did:schema:b22f7835-0255-412b-8663-d1131c48aa66/2.0.0"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Credentials",
+					"item": [
+						{
+							"name": "Issue Credential",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"credential\": {\n        \"@context\": [\n            \"https://www.w3.org/2018/credentials/v1\",\n            {\n                \"@context\": {\n                    \"@version\": 1.1,\n                    \"@protected\": true,\n                    \"id\": \"@id\",\n                    \"schema\": \"https://schema.org/\",\n                    \"UniversityDegreeCredential\": {\n                        \"@id\": \"iri:3425\",\n                        \"@context\": {\n                            \"@version\": 1.1,\n                            \"id\": \"@id\",\n                            \"grade\": \"schema:Text\",\n                            \"programme\": \"schema:Text\",\n                            \"certifyingInstitute\": \"schema:Text\",\n                            \"evaluatingInstitute\": \"schema:Text\"\n                        }\n                    }\n                }\n            }\n        ],\n        \"type\": [\n            \"VerifiableCredential\",\n            \"UniversityDegreeCredential\"\n        ],\n        \"issuer\": \"did:rcw:5d5202e5-c451-47f5-b9b0-4974187c27f9\",\n        \"issuanceDate\": \"2023-02-06T11:56:27.259Z\",\n        \"expirationDate\": \"2025-02-08T11:56:27.259Z\",\n        \"credentialSubject\": {\n            \"type\": \"UniversityDegreeCredential\",\n            \"id\": \"did:rcw:bf99c471-ab63-4e2c-b945-58b81ebedde1\",\n            \"grade\": \"A\",\n            \"programme\": \"BE\",\n            \"certifyingInstitute\": \"Anna\",\n            \"evaluatingInstitute\": \"Anna\"\n        }\n    },\n    \"credentialSchemaId\": \"did:schema:417b223a-ae71-4f3d-badf-cdde4d791513\",\n    \"credentialSchemaVersion\": \"1.0.0\",\n    \"tags\": [\n        \"tag1\",\n        \"tag2\",\n        \"tag3\"\n    ],\n    \"method\": \"cbse\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{CREDENTIAL_BASE_URL}}/credentials/issue"
+							},
+							"response": []
+						},
+						{
+							"name": "Verify Credentials",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{CREDENTIAL_BASE_URL}}/credentials/did:cbse:ff2ed5a5-7cdd-4897-9e07-4e62a89a6983/verify"
+							},
+							"response": []
+						},
+						{
+							"name": "Revoke Credentials",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{CREDENTIAL_BASE_URL}}credentials/{id}"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "DID",
+					"item": [
+						{
+							"name": "Generate",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"content\": [\n        {\n            \"alsoKnownAs\": [\n                \"did.test@gmail.com.test\"\n            ],\n            \"services\": [\n                {\n                    \"id\": \"IdentityHub\",\n                    \"type\": \"IdentityHub\",\n                    \"serviceEndpoint\": {\n                        \"@context\": \"schema.identity.foundation/hub\",\n                        \"@type\": \"UserServiceEndpoint\",\n                        \"instance\": [\n                            \"did:test:hub.id\"\n                        ]\n                    }\n                }\n            ],\n            \"method\": \"rcw\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{IDENTITY_BASE_URL}}/did/generate"
+							},
+							"response": []
+						},
+						{
+							"name": "Resolve DID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{IDENTITY_BASE_URL}}/did/resolve/did:rcw:5169afc6-2c6e-4892-a203-b4b6b32e6ff7"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

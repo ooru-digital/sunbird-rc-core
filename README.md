@@ -27,3 +27,18 @@ More documentation can be found [here](https://docs.sunbirdrc.dev/).
 
 This repository's contents are licensed under the MIT license. See the
 [license file](./LICENSE) for more details.
+
+
+# Credflow-sunbird-rc-2.0.0
+
+## Installation and Setup
+
+1. Need to set up the vault by uisng script `setup_vault.sh`
+2. Need to update the `VAULT_TOKEN` in `.env`. 
+3. Run only vault, db and keycloak through `docker-compose -f docker-compose.yml up -d vault db keycloak`
+4. Unseal vault by uisng `keys.txt`. 
+5. Run all the containers `docker-compose -f docker-compose.yml up -d`
+
+Postman collections: 
+
+    Refer: docs
