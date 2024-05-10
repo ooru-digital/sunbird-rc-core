@@ -91,3 +91,6 @@ db-data*
 vault-data
 es-data*
 keycloak-mobile*.jar
+
+/es_data
+keys.txt
