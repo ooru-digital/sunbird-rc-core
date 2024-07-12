@@ -7,10 +7,6 @@ dump.json
 
 .setupVars.sh
 
-# ignore .env
-*.env
-.env
-
 node_modules
 .idea
 *.iml
